@@ -10,7 +10,7 @@ async function bootstrap() {
   if (cluster.isPrimary) {
     logger.debug(`Starting primary cluster ${process.pid}`);
 
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 5; i++) {
       cluster.fork();
     }
 
@@ -34,6 +34,9 @@ async function bootstrap() {
         options: {
           client: {
             brokers: ['localhost:9092'],
+          },
+          run: {
+            partitionsConsumedConcurrently: 5,
           },
         },
       },
