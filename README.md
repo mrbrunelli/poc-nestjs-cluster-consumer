@@ -34,6 +34,8 @@ Recomendo a utilização de um [Kafka Client](https://www.xeotek.com/) para o en
 
 - [Documentação Cluster Node](https://nodejs.org/api/cluster.html#cluster)
 
+- [Cluster no NestJS](https://dev.to/danudenny/clustering-nest-js-2mj7)
+
 - [Montando Container Kafka](https://medium.com/azure-na-pratica/apache-kafka-kafdrop-docker-compose-montando-rapidamente-um-ambiente-para-testes-606cc76aa66)
 
 - [Vários consumidores no Kafka](https://stackoverflow.com/questions/35561110/can-multiple-kafka-consumers-read-same-message-from-the-partition)
