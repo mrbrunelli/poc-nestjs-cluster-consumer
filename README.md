@@ -2,6 +2,7 @@
 
 > POC de uma aplicação escrita com NestJS consumindo várias partições de um tópico no Kafka, de forma paralela, utilizando o módulo Cluster do Node.js.
 > Cada worker processa indivualmente mensagens da partição que se conectou.
+> O ideal é que tenha sempre mais partições do que workers, pois dessa forma é garantido que todos os workers se conectarão à uma ou várias partições.
 
 ## Como executar
 
