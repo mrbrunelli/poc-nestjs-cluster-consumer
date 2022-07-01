@@ -24,7 +24,7 @@ npm install
 npm run start
 ```
 
-4. Acesse o Kafdrop e crie/delete tópicos com 1 ou mais partições
+4. Acesse o Kafdrop e crie o tópico "beers-topic" com 5 ou mais partições
    [http://localhost:190001](http://localhost:190001)
 
 ## Utilitários
@@ -48,9 +48,8 @@ Recomendo a utilização de um [Kafka Client](https://www.xeotek.com/) para o en
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Привет, мир 3",
-      "from": "Rússia"
+      "name": "Spaten 300ml",
+      "price": 3.99
     },
     "headers": [],
     "keyMeta": {},
@@ -59,100 +58,91 @@ Recomendo a utilização de um [Kafka Client](https://www.xeotek.com/) para o en
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Hello World 2",
-      "from": "EUA"
+      "name": "Colorado 600ml",
+      "price": 13.5
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Привет, мир 6",
-      "from": "Rússia"
+      "name": "Amstel 300ml",
+      "price": 3.4
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Привет, мир 4",
-      "from": "Rússia"
+      "name": "Boa 600ml",
+      "price": 6.0
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Olá Mundo 7",
-      "from": "Brasil"
+      "name": "Brahma Duplo Malte 300ml",
+      "price": 3.68
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Hello World 5",
-      "from": "EUA"
+      "name": "Heineken 350ml",
+      "price": 5.29
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Привет, мир 8",
-      "from": "Rússia"
+      "name": "Heineken 5l",
+      "price": 109.99
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Olá Mundo 1",
-      "from": "Brasil"
+      "name": "Baden Baden IPA 350ml",
+      "price": 6.0
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Olá Mundo 10",
-      "from": "Brasil"
+      "name": "Skol 1l",
+      "price": 8.0
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   },
   {
     "key": null,
     "value": {
-      "type": "application/json",
-      "message": "Hello World 9",
-      "from": "EUA"
+      "name": "Sub Zero 350ml",
+      "price": 2.98
     },
     "headers": [],
-    "keyMeta": null,
+    "keyMeta": {},
     "valueMeta": {}
   }
 ]
