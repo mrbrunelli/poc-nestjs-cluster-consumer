@@ -4,14 +4,23 @@ import os from 'node:os';
 
 const logger = new Logger('AppCluster');
 
+// Coloque 0 para não utilizar Workers
+const WORKERS = os.cpus().length;
+
 export class AppCluster {
   static register(callback: Function): void {
+    if (WORKERS > 0) {
+      AppCluster.runWithWorkers(callback);
+    } else {
+      callback();
+    }
+  }
+
+  private static runWithWorkers(callback: Function) {
     if (cluster.isPrimary) {
-      logger.debug('Starting primary cluster');
+      logger.debug('Starting primary cluster...');
 
-      const totalOfWorkers = os.cpus().length;
-
-      for (let i = 0; i < totalOfWorkers; i++) {
+      for (let i = 0; i < WORKERS; i++) {
         cluster.fork();
       }
 
@@ -22,15 +31,13 @@ export class AppCluster {
           logger.error(
             `Worker ${worker.process.pid} died. Starting new worker...`,
           );
-
           cluster.fork();
         }
       });
     } else {
       logger.debug(
-        `Starting new NestJS microservice instance with worker ${process.pid}`,
+        `Starting new NestJS microservice instance with worker ${process.pid}...`,
       );
-
       callback();
     }
   }
